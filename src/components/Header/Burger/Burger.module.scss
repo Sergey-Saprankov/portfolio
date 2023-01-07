@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  cursor: pointer;
+
+  .block {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+  }
+}
+
+
+.close {
+  width: 25px;
+  height: 25px;
+}
