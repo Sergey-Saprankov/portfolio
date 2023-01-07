@@ -12,6 +12,7 @@ import Modal from "./components/Modal/Modal";
 import Skills from "./components/Skills/Skills";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Loading from "./components/Loading/Loading";
+import Contacts from "./components/Contacts/Contacts";
 
 function getWindowSize() {
     const {innerWidth, innerHeight} = window;
@@ -48,7 +49,8 @@ const App = () => {
                     {!hide && <Route path={'/'} element={<Home windowSize={windowSize.innerWidth}/>}/>}
                     {!hide && <Route path={'/Home'} element={<Home windowSize={windowSize.innerWidth}/>}/>}
                     <Route path={'/Skills'} element={<Skills/>}/>
-                    <Route path={'/portfolio'} element={<Portfolio/>}/>
+                    <Route path={'/Portfolio'} element={<Portfolio/>}/>
+                    <Route path={'/Contacts'} element={<Contacts/>}/>
                 </Routes>
             </div>
             <div className={'animationContainer'}>

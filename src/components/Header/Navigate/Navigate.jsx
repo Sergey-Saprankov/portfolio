@@ -16,14 +16,14 @@ const Navigate = ({flex, setDynamic, setActive}) => {
                 </NavLink>
             </li>
             <li onClick={() => setDynamic('portfolio')} className={s.item}>
-                <NavLink to={'/portfolio'} className={s.link} href="">
+                <NavLink to={'/Portfolio'} className={({isActive}) => isActive ? `${s.link} ${s.active}` : s.link} >
                     Portfolio
                 </NavLink>
             </li>
             <li onClick={() => setDynamic('contacts')} className={s.item}>
-                <a className={s.link} href="">
+                <NavLink to={'/Contacts'} className={({isActive}) => isActive ? `${s.link} ${s.active}` : s.link}>
                     Contacts
-                </a>
+                </NavLink>
             </li>
             <li className={`${s.item} ${s.download}`}>
                 <a className={s.link} href="">

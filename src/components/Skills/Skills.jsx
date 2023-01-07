@@ -14,6 +14,7 @@ import Preloader from "../Preloader/Preloader";
 const Skills = () => {
     return (
         <div className={s.container}>
+            <div className={s.animate}></div>
             <div className={s.wrapper}>
                 <h2 className={s.title}>
                     Skills

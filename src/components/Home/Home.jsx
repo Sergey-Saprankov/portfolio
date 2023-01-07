@@ -11,6 +11,7 @@ const Home = ({windowSize}) => {
 
     return (
         <div className={s.wrapper}>
+            <div className={s.animate}></div>
             <div className={s.container}>
                 <div className={s.innerWrapper}>
                     <div className={s.avatarContainer}>
