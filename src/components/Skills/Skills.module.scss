@@ -38,42 +38,108 @@
         flex-wrap: wrap;
         gap: 60px;
 
+
         div:nth-child(1) {
           animation: scale 1s linear;
+
+          & div {
+            animation: rotate 9s linear infinite;
+
+          &:hover {
+             animation: rotate 1s linear infinite;
+           }
+          }
         }
 
-        div:nth-child(2) {
-          animation: scale 2s linear;
-        }
+          div:nth-child(2) {
+            animation: scale 2s linear; 
 
-        div:nth-child(3) {
-          animation: scale 3s linear;
-        }
+            & div {
+              animation: rotate 9s linear infinite;
+  
+            &:hover {
+               animation: rotate 1s linear infinite;
+             }
+            }
+          }
 
-        div:nth-child(4) {
-          animation: scale 4s linear;
-        }
+          div:nth-child(3) {
+            animation: scale 3s linear;
 
-        div:nth-child(5) {
-          animation: scale 5s linear;
-        }
+            & div {
+              animation: rotate 9s linear infinite;
+  
+            &:hover {
+               animation: rotate 1s linear infinite;
+             }
+            }
+          }
+  
+          div:nth-child(4) {
+            animation: scale 4s linear;
 
-        div:nth-child(6) {
-          animation: scale 6s linear;
-        }
+            & div {
+              animation: rotate 9s linear infinite;
+  
+            &:hover {
+               animation: rotate 1s linear infinite;
+             }
+            }
+          }
+  
+          div:nth-child(5) {
+            animation: scale 5s linear;
 
-        div:nth-child(7) {
-          animation: scale 7s linear;
-        }
+            & div {
+              animation: rotate 9s linear infinite;
+  
+            &:hover {
+               animation: rotate 1s linear infinite;
+             }
+            }
+          }
+  
+          div:nth-child(6) {
+            animation: scale 6s linear;
 
-        div:nth-child(8) {
-          animation: scale 8s linear;
+            & div {
+              animation: rotate 9s linear infinite;
+  
+            &:hover {
+               animation: rotate 1s linear infinite;
+             }
+            }
+          }
+  
+          div:nth-child(7) {
+            animation: scale 7s linear;
+
+            & div {
+              animation: rotate 9s linear infinite;
+  
+            &:hover {
+               animation: rotate 1s linear infinite;
+             }
+            }
+          }
+  
+          div:nth-child(8) {
+            animation: scale 8s linear;
+
+            & div {
+              animation: rotate 9s linear infinite;
+  
+            &:hover {
+               animation: rotate 1s linear infinite;
+             }
+            }
+          }
+
         }
+       
       }
     }
 
-
-  }
 
 
 @keyframes transition {
@@ -120,5 +186,15 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
