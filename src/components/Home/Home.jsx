@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Home.module.scss'
 import avatar from './img/ava3.jpg'
 import Loading from "../Loading/Loading";
+import Title from "../Title/Title";
 
 const Home = ({windowSize}) => {
 
@@ -12,6 +13,7 @@ const Home = ({windowSize}) => {
     return (
         <div className={s.wrapper}>
             <div className={s.animate}></div>
+            <Title title={'Home'}/>
             <div className={s.container}>
                 <div className={s.innerWrapper}>
                     <div className={s.avatarContainer}>
