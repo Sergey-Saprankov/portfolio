@@ -20,14 +20,14 @@ const Skills = () => {
             <div className={s.wrapper}>
                 <div className={s.innerWrapper}>
                     <div className={s.skillContainer}>
-                        <Skill src={javascript} alt={"JS"}/>
-                        <Skill src={ts} alt={"TS"}/>
-                        <Skill src={react} alt={"React"}/>
-                        <Skill src={redux} alt={"Redux"}/>
-                        <Skill src={formik} alt={"Formik"}/>
-                        <Skill src={rest} alt={"RestApi"}/>
-                        <Skill src={git} alt={"Git"}/>
-                        <Skill src={test} alt={"Unit test"}/>
+                        <Skill title={'JavaScript'} src={javascript} alt={"JS"}/>
+                        <Skill title={'TypeScript'} src={ts} alt={"TS"}/>
+                        <Skill title={'React'} src={react} alt={"React"}/>
+                        <Skill title={'Redux'} src={redux} alt={"Redux"}/>
+                        <Skill title={'Formik'} src={formik} alt={"Formik"}/>
+                        <Skill title={'RestApi'} src={rest} alt={"RestApi"}/>
+                        <Skill title={'Git'} src={git} alt={"Git"}/>
+                        <Skill title={'Unit Test'} src={test} alt={"Unit test"}/>
                     </div>
                 </div>
             </div>
