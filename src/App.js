@@ -24,10 +24,9 @@ const App = () => {
   const [active, setActive] = useState(false);
   const [dynamic, setDynamic] = useState("home");
   const [hide, setHide] = useState(true);
-
+  setTimeout(() => setHide(false), 3000);
   useEffect(() => {
     function handleWindowResize() {
-      setTimeout(() => setHide(false), 3000);
       setWindowSize(getWindowSize());
     }
 
@@ -56,7 +55,7 @@ const App = () => {
       />
       <div className={"content"}>
         <Routes>
-          {!hide && <Route path={"/"} element={<Navigate to={"/Home"} />} />}
+          {<Route path={"/"} element={<Navigate to={"/Home"} />} />}
           {!hide && (
             <Route
               path={"/Home"}
