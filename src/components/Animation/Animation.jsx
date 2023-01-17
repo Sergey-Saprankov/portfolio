@@ -43,7 +43,7 @@ const Animation = () => {
           default: "bounce",
         },
         random: false,
-        speed: 1,
+        speed: 0.2,
         straight: true,
       },
       number: {
@@ -57,10 +57,10 @@ const Animation = () => {
         value: 1,
       },
       shape: {
-        type: "star",
+        type: "circle",
       },
       size: {
-        value: { min: 3, max: 7 },
+        value: { min: 1, max: 2 },
       },
     },
     detectRetina: true,
