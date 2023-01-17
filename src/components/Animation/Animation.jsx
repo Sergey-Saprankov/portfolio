@@ -1,78 +1,78 @@
-import React, {useCallback} from 'react';
+import React, { useCallback } from "react";
 import Particles from "react-particles";
-import {loadFull} from "tsparticles";
+import { loadFull } from "tsparticles";
 
 const Animation = () => {
-    const particlesInit = useCallback(async engine => {
-        console.log(engine);
-        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
-        await loadFull(engine);
-    }, []);
+  const particlesInit = useCallback(async (engine) => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
+  }, []);
 
-    const particlesLoaded = useCallback(async container => {
-        await console.log(container);
-    }, []);
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
 
-    const options = {
-        background: {
-            color: {
-                value: "#000000",
-            },
+  const options = {
+    background: {
+      color: {
+        value: "#000000",
+      },
+    },
+    fpsLimit: 60,
+    particles: {
+      color: {
+        value: "#ffffff",
+      },
+      links: {
+        color: "#ffffff",
+        distance: 10,
+        enable: true,
+        opacity: 1,
+        width: 3,
+      },
+      collisions: {
+        enable: true,
+      },
+      move: {
+        directions: "none",
+        enable: true,
+        outModes: {
+          default: "bounce",
         },
-        fpsLimit: 60,
-        particles: {
-            color: {
-                value: "#ffffff",
-            },
-            links: {
-                color: "#ffffff",
-                distance: 10,
-                enable: true,
-                opacity: 1,
-                width: 3,
-            },
-            collisions: {
-                enable: true,
-            },
-            move: {
-                directions: "none",
-                enable: true,
-                outModes: {
-                    default: "bounce",
-                },
-                random: false,
-                speed: 1,
-                straight: false,
-            },
-            number: {
-                density: {
-                    enable: true,
-                    area: 800,
-                },
-                value: 80,
-            },
-            opacity: {
-                value: 1,
-            },
-            shape: {
-                type: "circle",
-            },
-            size: {
-                value: {min: 1, max: 7},
-            },
+        random: false,
+        speed: 1,
+        straight: true,
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 800,
         },
-        detectRetina: true,
-    }
-    return (
-        <Particles
-                   id="tsparticles"
-                   init={particlesInit}
-                   loaded={particlesLoaded}
-                   options={options}
-        />
-    );
+        value: 80,
+      },
+      opacity: {
+        value: 1,
+      },
+      shape: {
+        type: "star",
+      },
+      size: {
+        value: { min: 3, max: 7 },
+      },
+    },
+    detectRetina: true,
+  };
+  return (
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={options}
+    />
+  );
 };
 
 export default Animation;

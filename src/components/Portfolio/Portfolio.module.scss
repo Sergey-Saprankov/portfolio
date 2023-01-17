@@ -43,16 +43,19 @@
 
 @keyframes transition {
   0% {
+    transform: translateY(0);
+    background-color: #000;
     z-index: 5;
   }
 
   50% {
-    transform: translateY(50%);
+    transform: translateY(-50%);
+    background-color: #000;
     z-index: 5;
   }
 
   100% {
-    transform: translateY(100%);
+    transform: translateY(-100%);
     z-index: 5;
   }
 }
