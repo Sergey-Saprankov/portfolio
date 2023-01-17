@@ -61,6 +61,10 @@
     font-size: 102px;
     line-height: 1;
     color: rgba(100, 99, 99, 0.253);
+
+    @media (max-width: 570px) {
+      font-size: 65px;
+    }
   }
 }
 

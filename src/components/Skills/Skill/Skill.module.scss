@@ -1,29 +1,43 @@
 .skill {
   display: flex;
+  padding: 10px;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 20%;
-  min-width: 250px;
-
+  width: 200px;
+  height: 200px;
   gap: 20px;
-  min-height: 250px;
+
   border: 2px solid #fff;
   border-radius: 20%;
   transition: transform ease-in-out .3s;
+
+  @media (max-width: 391px) {
+    width: 120px;
+    height: 130px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  @media (max-width: 426px) {
+    width: 140px;
+    height: 130px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  @media (max-width: 769px) {
+    width: 150px;
+    height: 130px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
 
   &:hover {
     transform: scale(1.2);
     transition: transform ease-in-out .3s;
   }
 
-  @media (max-width: 380px) {
-    flex: 0 0 65px;
-    height: 90px;
-    border: none;
-    gap: 5px;
-  }
 
   .containerImg {
     width: 120px;
@@ -36,13 +50,23 @@
     background-color: #040404;
     animation: rotate 9s linear infinite;
 
-    &:hover {
-      animation: rotate 1s linear infinite;
+    @media (max-width: 391px) {
+      width: 80px;
+      height: 80px;
     }
 
-    @media (max-width: 380px) {
-      width: 50px;
-      height: 50px;
+    @media (max-width: 426px) {
+      width: 80px;
+      height: 80px;
+    }
+
+    @media (max-width: 769px) {
+      width: 70px;
+      height: 70px;
+    }
+
+    &:hover {
+      animation: rotate 1s linear infinite;
     }
 
     .img {
@@ -51,7 +75,17 @@
       display: block;
       border-radius: 10%;
 
-      @media (max-width: 380px) {
+      @media (max-width: 391px) {
+        width: 60px;
+        height: 60px;
+      }
+
+      @media (max-width: 426px) {
+        width: 40px;
+        height: 40px;
+      }
+
+      @media (max-width: 769px) {
         width: 30px;
         height: 30px;
       }
@@ -62,6 +96,14 @@
     font-size: 16px;
     font-weight: bold;
     color: #fff;
+
+    @media (max-width: 391px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 426px) {
+      font-size: 14px;
+    }
   }
 }
 
