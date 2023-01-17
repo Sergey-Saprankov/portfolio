@@ -24,9 +24,10 @@ const App = () => {
   const [active, setActive] = useState(false);
   const [dynamic, setDynamic] = useState("home");
   const [hide, setHide] = useState(true);
-  setTimeout(() => setHide(false), 5000);
+
   useEffect(() => {
     function handleWindowResize() {
+      setTimeout(() => setHide(false), 3000);
       setWindowSize(getWindowSize());
     }
 
