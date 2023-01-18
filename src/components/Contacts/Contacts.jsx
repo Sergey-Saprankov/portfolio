@@ -6,7 +6,7 @@ import telephone from "./img/telephone.svg";
 import email from "./img/email.svg";
 import telegram from "./img/telegram.svg";
 
-const Contacts = () => {
+const Contacts = ({ color, colorList }) => {
   return (
     <div className={s.container}>
       <div className={s.animate}></div>
@@ -70,7 +70,11 @@ const Contacts = () => {
             placeholder={"Message"}
           ></textarea>
 
-          <button className={s.submitBtn} type={"submit"}>
+          <button
+            style={{ background: colorList[color] }}
+            className={s.submitBtn}
+            type={"submit"}
+          >
             Send Message
           </button>
         </form>

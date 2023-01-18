@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
-const Animation = () => {
+const Animation = ({ colorList, color }) => {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -24,7 +24,7 @@ const Animation = () => {
     fpsLimit: 60,
     particles: {
       color: {
-        value: "#ffffff",
+        value: colorList[color],
       },
       links: {
         color: "#ffffff",
