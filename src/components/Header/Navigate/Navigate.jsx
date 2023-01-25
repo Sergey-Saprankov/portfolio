@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Navigate.module.scss";
 import { NavLink } from "react-router-dom";
+import cv from "./cv.pdf";
 
 const activeList = {
   ["1"]: "one",
@@ -70,7 +71,7 @@ const Navigate = ({ flex, setDynamic, setActive, color, colorList }) => {
         }}
         className={`${s.item} ${s.download}`}
       >
-        <a className={s.link} href="">
+        <a className={s.link} target={"_blank"} href={cv}>
           Download CV
         </a>
       </li>
