@@ -150,18 +150,27 @@
     }
 
     .formSection {
+      flex-grow: 2;
       align-self: flex-start;
       display: flex;
       flex-direction: column;
       gap: 20px;
 
       @media (max-width: 951px) {
-        width: 80%;
+        max-width: 80%;
+        flex-grow: 1;
+        align-self: center;
       }
       .inputBlock {
         display: flex;
         flex-wrap: wrap;
         gap: 4%;
+
+        @media (max-width: 760px) {
+          width: 100%;
+          flex-direction: column;
+          gap: 10px;
+        }
 
         .input {
           padding: 5px 0 5px 10px;
@@ -170,8 +179,11 @@
           background-color: rgba(128, 128, 128, 0.2);
           border-radius: 10px;
           outline: none;
-          border: none;
           color: #fff;
+
+          @media (max-width: 760px) {
+            width: 100%;
+          }
         }
       }
 
@@ -186,7 +198,7 @@
       }
 
       .submitBtn {
-        width: 250px;
+        max-width: 350px;
         padding: 15px 45px;
         background-color: rgb(235, 74, 76);
         border-radius: 50px;
@@ -199,6 +211,7 @@
 
         @media (max-width: 951px) {
           width: 100%;
+          align-self: center;
         }
 
         &:hover {
@@ -212,6 +225,13 @@
   }
 }
 
+.error {
+  border: 1px solid indianred;
+}
+
+.success {
+  border: none;
+}
 
 @keyframes transition {
   0% {

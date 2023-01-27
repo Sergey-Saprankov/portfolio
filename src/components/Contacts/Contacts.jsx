@@ -5,8 +5,30 @@ import location from "./img/location.svg";
 import telephone from "./img/telephone.svg";
 import email from "./img/email.svg";
 import telegram from "./img/telegram.svg";
+import { useForm } from "react-hook-form";
+import { json } from "react-router-dom";
+import axios from "axios";
 
 const Contacts = ({ color, colorList }) => {
+  const {
+    register,
+    formState: { errors, isValid },
+    handleSubmit,
+    reset,
+  } = useForm({ mode: "onBlur" });
+
+  const onSubmit = (data) => {
+    axios
+      .post(`https://formspree.io/f/xdovaann`, data)
+      .then((res) => {
+        console.log(res);
+        reset();
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
   return (
     <div className={s.container}>
       <div className={s.animate}></div>
@@ -55,16 +77,49 @@ const Contacts = ({ color, colorList }) => {
           </div>
         </div>
 
-        <form className={s.formSection}>
+        <form onSubmit={handleSubmit(onSubmit)} className={s.formSection}>
           <div className={s.inputBlock}>
-            <input className={s.input} type="text" placeholder={"Name"} />
-            <input className={s.input} type="email" placeholder={"Email"} />
+            <input
+              {...register("firstName", {
+                required: true,
+                minLength: 2,
+                pattern: /^[A-Za-z]+$/i,
+              })}
+              className={
+                errors.firstName
+                  ? `${s.input} ${s.error}`
+                  : `${s.input} ${s.success}`
+              }
+              type="text"
+              placeholder={"Name"}
+            />
+            <input
+              {...register("email", {
+                required: true,
+                minLength: 2,
+                pattern: /^[A-Za-z]+$/i,
+              })}
+              className={
+                errors.email
+                  ? `${s.input} ${s.error}`
+                  : `${s.input} ${s.success}`
+              }
+              type="text"
+              placeholder={"Email"}
+            />
           </div>
 
           <textarea
-            className={s.textArea}
-            name="message"
-            id=""
+            {...register("text", {
+              required: true,
+              minLength: 1,
+              pattern: /^[A-Za-z]+$/i,
+            })}
+            className={
+              errors.text
+                ? `${s.textArea} ${s.error}`
+                : `${s.textArea} ${s.success}`
+            }
             cols="10"
             rows="10"
             placeholder={"Message"}
@@ -74,6 +129,7 @@ const Contacts = ({ color, colorList }) => {
             style={{ background: colorList[color] }}
             className={s.submitBtn}
             type={"submit"}
+            disabled={!isValid}
           >
             Send Message
           </button>
