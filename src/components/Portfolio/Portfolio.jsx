@@ -16,6 +16,7 @@ const Portfolio = ({ color, colorList }) => {
         <div className={s.contentBlock}>
           <div className={s.portfolioContainer}>
             <Project
+              href={"todo-toolkit-bay.vercel.app"}
               color={color}
               colorList={colorList}
               title={"Todolist"}
@@ -28,9 +29,10 @@ const Portfolio = ({ color, colorList }) => {
               img={social}
             />
             <Project
+              href={"learn-cards.vercel.app"}
               color={color}
               colorList={colorList}
-              title={"QUESTIONS APP"}
+              title={"Training cards"}
               img={cards}
             />
           </div>

@@ -2,12 +2,12 @@ import React from "react";
 import s from "./Project.module.scss";
 import todo from "../img/todo.jpg";
 
-const Project = ({ title, img, color, colorList }) => {
+const Project = ({ title, img, color, colorList, href }) => {
   return (
     <div className={s.portfolio}>
       <div className={s.modal}>
         <div className={s.demo}>
-          <a href="#">Demo</a>
+          <a href={href}>Demo</a>
         </div>
       </div>
       <div className={s.containerImg}>
