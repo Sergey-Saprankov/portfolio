@@ -36,7 +36,7 @@ const colorList = {
 };
 
 const App = () => {
-  const [color, setColor] = useState("10");
+  const [color, setColor] = useState("8");
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [active, setActive] = useState(false);
   const [dynamic, setDynamic] = useState("home");
