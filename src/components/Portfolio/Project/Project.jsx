@@ -7,7 +7,9 @@ const Project = ({ title, img, color, colorList, href }) => {
     <div className={s.portfolio}>
       <div className={s.modal}>
         <div className={s.demo}>
-          <a href={href}>Demo</a>
+          <a href={href} target={"_blank"}>
+            Demo
+          </a>
         </div>
       </div>
       <div className={s.containerImg}>
