@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Navigate.module.scss";
 import { NavLink } from "react-router-dom";
-import cv from "./cv.pdf";
+import cv from "./myCV.pdf";
 
 const activeList = {
   ["1"]: "one",
